@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "nsfix",
+  "version": "${version}",
+  "name": "Namespaceless Suggestions",
+  "description": "Suggests items/blocks/resources from ANY mod namespace (cobblemon:, lumymon:, etc.) when tab-completing commands without typing the namespace prefix, on PEAKCobbleverse.",
+  "authors": [
+    "PEAKCobbleverse"
+  ],
+  "contact": {},
+  "license": "CC0-1.0",
+  "environment": "*",
+  "entrypoints": {},
+  "mixins": [
+    "nsfix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}

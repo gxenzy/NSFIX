@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.peakcobbleverse.nsfix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SharedSuggestionProviderMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
