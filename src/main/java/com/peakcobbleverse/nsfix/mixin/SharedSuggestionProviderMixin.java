@@ -20,7 +20,7 @@ import java.util.function.Function;
  * suggested, regardless of which mod registered it.
  */
 @Mixin(SharedSuggestionProvider.class)
-public class SharedSuggestionProviderMixin {
+public interface SharedSuggestionProviderMixin {
 
     /**
      * @author PEAKCobbleverse
@@ -28,7 +28,7 @@ public class SharedSuggestionProviderMixin {
      * unqualified (no ":") path, instead of only the "minecraft" namespace.
      */
     @Overwrite
-    public static <T> void filterResources(Iterable<T> resources, String remaining, Function<T, ResourceLocation> function, Consumer<T> action) {
+    static <T> void filterResources(Iterable<T> resources, String remaining, Function<T, ResourceLocation> function, Consumer<T> action) {
         boolean hasNamespace = remaining.indexOf(':') > -1;
 
         for (T resource : resources) {
