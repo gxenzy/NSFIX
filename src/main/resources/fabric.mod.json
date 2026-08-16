@@ -2,20 +2,22 @@
   "schemaVersion": 1,
   "id": "nsfix",
   "version": "${version}",
-  "name": "Namespaceless Suggestions",
-  "description": "Suggests items/blocks/resources from ANY mod namespace (cobblemon:, lumymon:, etc.) when tab-completing commands without typing the namespace prefix, on PEAKCobbleverse.",
+  "name": "Namespaceless Commands",
+  "description": "Adds /igive, /isummon, /ieffect, /iplaysound, /iparticle, /isetblock, /ifill \u2014 shortcut commands that resolve bare item/entity/effect/sound/particle/block names across every loaded mod's namespace, so you never have to type cobblemon:, lumymon:, etc.",
   "authors": [
     "PEAKCobbleverse"
   ],
   "contact": {},
   "license": "CC0-1.0",
   "environment": "*",
-  "entrypoints": {},
-  "mixins": [
-    "nsfix.mixins.json"
-  ],
+  "entrypoints": {
+    "main": [
+      "com.peakcobbleverse.nsfix.NsFixMod"
+    ]
+  },
   "depends": {
     "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
     "minecraft": "~1.21.1",
     "java": ">=21"
   }
